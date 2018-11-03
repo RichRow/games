@@ -34,12 +34,4 @@ public class NaughtsAndCrossesBoard {
         }
         return sb.toString();
     }
-
-    public static void main(String[] args){
-        NaughtsAndCrossesBoard game = new NaughtsAndCrossesBoard();
-        System.out.println("Current State: " + game.toPrettyString());
-        game.updateBoard(CellValue.CROSS, 0, 0);
-        game.updateBoard(CellValue.NAUGHT, 1, 2);
-        System.out.println("Current State: " + game.toPrettyString());
-    }
 }
