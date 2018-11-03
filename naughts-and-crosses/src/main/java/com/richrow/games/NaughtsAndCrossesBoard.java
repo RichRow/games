@@ -1,25 +1,25 @@
 package com.richrow.games;
 
 /**
- * Hello world!
+ * Naughts and Crosses!
  */
 public class NaughtsAndCrossesBoard {
     private int width, height;
 
     private BoardCell[][] board;
 
-    public NaughtsAndCrossesBoard(int width, int height) {
-        this.width = width;
-        this.height = height;
+    public NaughtsAndCrossesBoard() {
+        this.width = 3;
+        this.height = 3;
         board = new BoardCell[width][height];
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
-                board[i][j] = new BoardCell(BoardCell.CellValue.UNOCCUPIED);
+                board[i][j] = new BoardCell(CellValue.UNOCCUPIED);
             }
         }
     }
 
-    public void updateBoard(BoardCell.CellValue value, int x, int y) {
+    public void updateBoard(CellValue value, int x, int y) {
         board[x][y].setCellValue(value);
     }
 
@@ -36,9 +36,10 @@ public class NaughtsAndCrossesBoard {
     }
 
     public static void main(String[] args){
-        NaughtsAndCrossesBoard game = new NaughtsAndCrossesBoard(3,3);
-        game.updateBoard(BoardCell.CellValue.CROSS, 0, 0);
-        game.updateBoard(BoardCell.CellValue.NAUGHT, 1, 2);
+        NaughtsAndCrossesBoard game = new NaughtsAndCrossesBoard();
+        System.out.println("Current State: " + game.toPrettyString());
+        game.updateBoard(CellValue.CROSS, 0, 0);
+        game.updateBoard(CellValue.NAUGHT, 1, 2);
         System.out.println("Current State: " + game.toPrettyString());
     }
 }
