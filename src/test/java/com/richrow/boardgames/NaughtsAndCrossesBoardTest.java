@@ -1,4 +1,4 @@
-package com.richrow.games;
+package com.richrow.boardgames;
 
 import com.richrow.boardgames.boards.NaughtsAndCrossesSymbols;
 import com.richrow.boardgames.games.Game;
