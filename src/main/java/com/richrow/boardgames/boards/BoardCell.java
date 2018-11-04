@@ -1,4 +1,4 @@
-package com.richrow.games;
+package com.richrow.boardgames.boards;
 
 public class BoardCell {
 
